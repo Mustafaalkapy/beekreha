@@ -87,7 +87,7 @@
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
     (function(){
-        emailjs.init("VeTqhMNZ9mhExWG7c"); // معرف المستخدم
+        emailjs.init("VeTqhMNZ9mhExWG7c"); // Public Key أو User ID
     })();
 
     document.getElementById("smellForm").addEventListener("submit", function(event) {
@@ -104,7 +104,7 @@
             message: `مرحباً صديقي ${name}، لكون صديقك يخجل منك، أرسلنا لك هذه الرسالة لكي تسبح لأن رائحتك نتنة وتزعجه.`
         };
 
-        emailjs.send("service_gpe554j", "vD8FHPOYGc1zqLfl0wF8V", templateParams)
+        emailjs.send("service_gpe554j", "template_e8cwrpf", templateParams)
             .then(function(response) {
                 document.getElementById("message").textContent = "تم إرسال الرسالة بنجاح!";
                 document.getElementById("smellForm").reset();
